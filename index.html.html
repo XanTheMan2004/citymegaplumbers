@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>City Mega Plumbers &amp; Electricians | Baileys Muckleneuk, Pretoria</title>
+<meta name="description" content="Plumbers and electricians in Baileys Muckleneuk, Pretoria. Leak detection, tap and pipe repairs, toilet and geyser installation. Call or WhatsApp for a quote.">
+<style>
+  :root {
+    --ink: #0d2f36;
+    --ink-soft: #3d5b62;
+    --paper: #f6f8f7;
+    --surface: #ffffff;
+    --line: #d3dedc;
+    --accent: #f2c230;
+    --accent-ink: #1a1500;
+    --hero-bg: #0d2f36;
+    --hero-text: #f6f8f7;
+    --hero-sub: #b9cfcb;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e8f0ee;
+      --ink-soft: #a7bcb8;
+      --paper: #0a1d22;
+      --surface: #11282e;
+      --line: #25434a;
+      --hero-bg: #061519;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+    padding-bottom: 72px;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 22px; }
+
+  /* Hero */
+  .hero { background: var(--hero-bg); color: var(--hero-text); padding: 28px 0 56px; }
+  .brand { font-weight: 700; letter-spacing: .01em; font-size: 1rem; color: var(--hero-sub); }
+  .hero h1 {
+    margin-top: 44px;
+    font-size: clamp(2.2rem, 7vw, 4.4rem);
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    max-width: 14em;
+  }
+  .hero p.sub { margin-top: 18px; font-size: 1.1rem; color: var(--hero-sub); max-width: 34em; }
+  .phone {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: clamp(2rem, 8vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 4px solid var(--accent);
+    line-height: 1.1;
+  }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  .btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.02rem;
+    text-decoration: none;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-main { background: var(--accent); color: var(--accent-ink); }
+  .btn-alt { background: transparent; color: var(--hero-text); }
+  .btn:hover { filter: brightness(1.08); }
+  .rating { margin-top: 26px; font-size: .95rem; color: var(--hero-sub); }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); letter-spacing: -.02em; line-height: 1.15; margin-bottom: 8px; }
+  .lede { color: var(--ink-soft); max-width: 36em; margin-bottom: 28px; }
+
+  .services { list-style: none; border-top: 2px solid var(--ink); }
+  .services li {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+    padding: 18px 0; border-bottom: 1px solid var(--line);
+    font-size: 1.15rem; font-weight: 600;
+  }
+  .services li span { font-weight: 400; font-size: .95rem; color: var(--ink-soft); text-align: right; }
+
+  .reviews { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  blockquote { border-left: 4px solid var(--accent); padding: 4px 0 4px 18px; margin-bottom: 22px; max-width: 38em; }
+  blockquote cite { display: block; margin-top: 6px; font-style: normal; font-size: .9rem; color: var(--ink-soft); }
+
+  .contact-grid { display: grid; gap: 36px; grid-template-columns: 1fr; }
+  @media (min-width: 800px) { .contact-grid { grid-template-columns: 1fr 1.1fr; } }
+  .details p { margin-bottom: 12px; }
+  .details strong { display: block; font-size: .9rem; color: var(--ink-soft); font-weight: 600; }
+  form { display: grid; gap: 14px; }
+  label { font-weight: 600; font-size: .95rem; }
+  input, select, textarea {
+    width: 100%; padding: 12px 14px; margin-top: 6px;
+    border: 2px solid var(--line); border-radius: 8px;
+    font: inherit; background: var(--surface); color: var(--ink);
+  }
+  textarea { min-height: 96px; resize: vertical; }
+  .note { font-size: .85rem; color: var(--ink-soft); }
+
+  footer { padding: 28px 0 40px; font-size: .9rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
+
+  /* Sticky call bar for phones */
+  .callbar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    display: flex; gap: 8px; padding: 10px 12px;
+    background: var(--hero-bg); border-top: 2px solid var(--accent);
+  }
+  .callbar a { flex: 1; text-align: center; padding: 13px 8px; border-radius: 8px; font-weight: 800; text-decoration: none; }
+  .callbar .c1 { background: var(--accent); color: var(--accent-ink); }
+  .callbar .c2 { border: 2px solid var(--accent); color: var(--hero-text); }
+  @media (min-width: 800px) { .callbar { display: none; } body { padding-bottom: 0; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">City Mega Plumbers &amp; Electricians</div>
+    <h1>Leak, blocked drain or broken geyser in Pretoria? Call us.</h1>
+    <p class="sub">Plumbing repairs and installations from our base in Baileys Muckleneuk.</p>
+    <a class="phone" href="tel:+27847705045">084 770 5045</a>
+    <div class="btn-row">
+      <a class="btn btn-main" href="tel:+27847705045">Call now</a>
+      <a class="btn btn-alt" href="https://wa.me/27847705045?text=Hi%2C%20I%20need%20a%20plumber">WhatsApp us</a>
+    </div>
+    <p class="rating">Rated 4.9 out of 5 on ProCompare</p>
+  </div>
+</header>
+
+<main>
+  <section id="services">
+    <div class="wrap">
+      <h2>What we fix and install</h2>
+      <p class="lede">Tell us what is wrong and we will give you a clear quote before any work starts.</p>
+      <ul class="services">
+        <li>Tap repair <span>Dripping, stuck or broken taps</span></li>
+        <li>Waste disposal repair <span>Kitchen units that jam or leak</span></li>
+        <li>Plumbing leak detection <span>Find the leak before it ruins a wall</span></li>
+        <li>Plumbing pipe repair <span>Burst, cracked or leaking pipes</span></li>
+        <li>Toilet installation <span>New or replacement toilets</span></li>
+        <li>Water heater installation <span>Geyser supply and fitting</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <h2>What customers say</h2>
+      <p class="lede">Real reviews from our Google listing.</p>
+      <blockquote>
+        <p>My water heater is working again. Thank you guys</p>
+        <cite>Win G., 5 stars on Google</cite>
+      </blockquote>
+      <blockquote>
+        <p>Great staff. Your guys are polite and hard working</p>
+        <cite>Keotshepile M., 5 stars on Google</cite>
+      </blockquote>
+      <blockquote>
+        <p>The service is good and affordable you guys try it</p>
+        <cite>Innocent Z., 5 stars on Google</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="details">
+        <h2>Get a quote</h2>
+        <p class="lede">Send us the details and we will get back to you. For urgent jobs, call.</p>
+        <p><strong>Phone</strong><a href="tel:+27847705045">084 770 5045</a></p>
+        <p><strong>Address</strong>654 Justice Mahomed St, Baileys Muckleneuk, Pretoria</p>
+      </div>
+
+      <form id="quote">
+        <label>Your name
+          <input type="text" id="name" required autocomplete="name">
+        </label>
+        <label>Your suburb
+          <input type="text" id="suburb" required>
+        </label>
+        <label>What do you need?
+          <select id="job">
+            <option>Tap repair</option>
+            <option>Waste disposal repair</option>
+            <option>Leak detection</option>
+            <option>Pipe repair</option>
+            <option>Toilet installation</option>
+            <option>Water heater installation</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Details
+          <textarea id="details"></textarea>
+        </label>
+        <button class="btn btn-main" type="submit">Send quote request on WhatsApp</button>
+        <p class="note">This opens WhatsApp with your message ready to send.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; City Mega Plumbers &amp; Electricians, Baileys Muckleneuk, Pretoria</div>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:+27847705045">Call now</a>
+  <a class="c2" href="https://wa.me/27847705045?text=Hi%2C%20I%20need%20a%20plumber">WhatsApp</a>
+</div>
+
+<script>
+  document.getElementById('quote').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var msg = 'Hi, I need a quote.\n' +
+      'Name: ' + document.getElementById('name').value + '\n' +
+      'Suburb: ' + document.getElementById('suburb').value + '\n' +
+      'Job: ' + document.getElementById('job').value + '\n' +
+      'Details: ' + document.getElementById('details').value;
+    window.open('https://wa.me/27847705045?text=' + encodeURIComponent(msg), '_blank');
+  });
+</script>
+</body>
+</html>
